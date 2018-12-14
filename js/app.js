@@ -5,7 +5,7 @@ $(function () {
         setTimeout(function () {
             $(".page_loader").fadeOut("fast");
             $('link[id="style_sheet"]').attr('href', 'css/colors/default.css');
-            $('.logo img').attr('src', 'img/logos/logo.png');
+            $('.logo img').attr('src', 'IMG/logos/logo.png');
         }, 100)
     });
 
@@ -231,7 +231,7 @@ $(function () {
         var name = $(this).attr('data-color');
         $('link[id="style_sheet"]').attr('href', 'css/colors/'+name+'.css');
         if(name == 'default'){
-            $('.logo img').attr('src', 'img/logos/logo.png');
+            $('.logo img').attr('src', 'IMG/logos/logo.png');
         }
         else{
             $('.logo img').attr('src', 'img/logos/'+name+'-logo.png');
