@@ -1,0 +1,508 @@
+<INCLURE(header)>
+<div class="page_loader"><img src="img/loader.gif" alt="Loader"></div>
+<!-- Banner start -->
+<div class="banner">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="main">
+          <div id="immersive_slider">
+            <BOUCLE_home_slider_top1(ARTICLES){id_mot=22}{!par date}{0,3}>
+              <div class="slide" data-blurred="[(#LOGO_ARTICLE|extraire_attribut{src})]">
+                <div class="overlay">
+                  <div class="banner-caption">
+                    <h2>#TITRE</h2>
+                    <span>
+                      <h4>Model [(#PS|textebrut)] <strong><?php echo number_format([(#SOUSTITRE|textebrut)]);?> RWF</strong> </h4>
+                    </span>
+
+                  </div>
+                </div>
+              </div>
+            </BOUCLE_home_slider_top1>
+            <a href="#" class="is-prev">&laquo;</a>
+            <a href="#" class="is-next">&raquo;</a>
+          </div>
+        </div>
+      </div>
+      <!-- slide end -->
+
+      <div class="col-sm-3">
+        <div class="search">
+          <h4>Search</h4>
+          <select class="wide" name="">
+            <option data-display="Manufacturer">Toyota</option>
+            <option value="1">Benz</option>
+            <option value="2">BMW</option>
+            <option value="4">Audi</option>
+          </select>
+          <select class="wide" name="">
+            <option data-display="Steeling">left</option>
+            <option value="1">right</option>
+          </select>
+          <select class="wide" name="">
+            <option data-display="Status">used</option>
+            <option value="1">new</option>
+          </select>
+          <select class="wide" name="">
+            <option data-display="Transmission">automatic</option>
+            <option value="1">manual</option>
+          </select>
+          <select class="wide mb-5" name="">
+            <option data-display="Fueling">essence</option>
+            <option value="1">diesel</option>
+          </select>
+          <a href="#" class="btn btn-sm ">Search <i class="fa fa-search"></i></a>
+        </div>
+      </div>
+    </div>
+
+</div>
+<!-- Banner end -->
+
+<!-- Featured car start-->
+<div class="featured-car content-area clearfix">
+    <div class="container">
+        <div class="main-title">
+            <h1>Featured Cars</h1>
+        </div>
+        <div class="row">
+          <BOUCLE_featured(ARTICLES){id_mot=21}{!par date}{0,3}>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp delay-03s">
+                <!-- Car box start-->
+                <div class="thumbnail car-box clearfix">
+                    <div class="car-box-thumbnail">
+                        <img src="[#URL_SITE_SPIP/IMG/(#LOGO_ARTICLE|fichier)]" alt="car-1">
+                        <div class="is-featured">
+                          <span class="for">
+                            <BOUCLE_gmotR1(GROUPES_MOTS){id_groupe=7}>
+                            <BOUCLE_mot_R1(MOTS){id_groupe}{id_article}>
+                            <a href="#URL_MOT" style="color: #fff;">FOR [(#TITRE|textebrut)]</a>
+                            </BOUCLE_mot_R1>
+                            </BOUCLE_gmotR1>
+                          </span>
+                        </div>
+                        <div class="listing-price">
+                            <span><?php echo number_format([(#SOUSTITRE|textebrut)]);?> RWF</span>
+                        </div>
+
+                        <div class="carbox-overlap-wrapper">
+                            <h2>Model [(#PS|textebrut)] </h2>
+                            <h4><?php echo number_format([(#SOUSTITRE|textebrut)]);?> RWF</h4>
+                            <div class="overlap-btns-area" style="float: right;">
+                                <div class="car-magnify-gallery">
+                                    <a href="[#URL_SITE_SPIP/IMG/(#LOGO_ARTICLE|fichier)]" class="overlap-btn">
+                                      <i class="fa fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- detail -->
+                    <div class="caption detail">
+                        <!-- Header -->
+                        <header class="clearfix">
+                            <h5 class="title">
+                                <a href="car-details.html">#TITRE</a>
+                            </h5>
+                            <ul class="custom-list">
+                                <li>
+                                  <BOUCLE_mot_R2(MOTS){id_groupe=5}{id_article}>
+                                    <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                  </BOUCLE_mot_R2> /
+                                </li>
+                                <li>
+                                  <BOUCLE_gmotR3(GROUPES_MOTS){id_groupe=2}>
+                                  <BOUCLE_mot_R3(MOTS){id_groupe}{id_article}>
+                                  <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                  </BOUCLE_mot_R3>
+                                </BOUCLE_gmotR3> /
+                                </li>
+                                <li>
+                                  <BOUCLE_gmotR4(GROUPES_MOTS){id_groupe=3}>
+                                    <BOUCLE_mot_R4(MOTS){id_groupe}{id_article}>
+                                      <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                    </BOUCLE_mot_R4>
+                                  </BOUCLE_gmotR4>
+                                </li>
+                            </ul>
+                        </header>
+                        <!-- paragraph -->
+                        <!-- Facilities List -->
+                        <div class="facilities-area">
+                            <ul class="facilities-list clearfix">
+                                <li>
+                                    <i class="flaticon-gasoline-pump"></i>
+                                    <span>
+                                      <BOUCLE_gmotR5(GROUPES_MOTS){id_groupe=3}>
+                                        <BOUCLE_mot_R5(MOTS){id_groupe}{id_article}>
+                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                        </BOUCLE_mot_R5>
+                                      </BOUCLE_gmotR5>
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="flaticon-automatic-flash-symbol"></i>
+                                    <span>
+                                      <BOUCLE_gmotR6(GROUPES_MOTS){id_groupe=2}>
+                                        <BOUCLE_mot_R6(MOTS){id_groupe}{id_article}>
+                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                        </BOUCLE_mot_R6>
+                                      </BOUCLE_gmotR6>
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="flaticon-road-with-broken-line"></i>
+                                    <span>
+                                      <BOUCLE_gmotR7(GROUPES_MOTS){id_groupe=1}>
+                                        <BOUCLE_mot_R7(MOTS){id_groupe}{id_article}>
+                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                        </BOUCLE_mot_R7>
+                                      </BOUCLE_gmotR7>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                      <BOUCLE_gmotR8(GROUPES_MOTS){id_groupe=8}>
+                                        <BOUCLE_mot_R8(MOTS){id_groupe}{id_article}>
+                                          <i class="flaticon-racing-flag"></i>
+                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                        </BOUCLE_mot_R8>
+                                      </BOUCLE_gmotR8>
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="flaticon-time"></i>
+                                    <span>
+                                      <a href="[(#URL_SITE_SPIP)]?page=fabrication&ps=[(#PS|textebrut)]">[(#PS|textebrut)]</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Car box end-->
+            </div>
+          </BOUCLE_featured>
+        </div>
+    </div>
+</div>
+<!-- Featured car end-->
+
+<!-- Featured car start-->
+<div class="featured-car content-area clearfix">
+    <div class="container">
+        <div class="main-title">
+            <h1>FOR SALE</h1>
+        </div>
+        <div class="row">
+          <BOUCLE_for_sale(ARTICLES){id_mot=15}{!par date}{0,6}>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp delay-03s">
+                <!-- Car box start-->
+                <div class="thumbnail car-box clearfix">
+                    <div class="car-box-thumbnail">
+                        <img src="[#URL_SITE_SPIP/IMG/(#LOGO_ARTICLE|fichier)]" alt="car-1">
+                        <div class="is-featured">
+                          <span class="for">
+                            <BOUCLE_gmotR9(GROUPES_MOTS){id_groupe=7}>
+                            <BOUCLE_mot_R9(MOTS){id_groupe}{id_article}>
+                            <a href="#URL_MOT" style="color: #fff;">FOR [(#TITRE|textebrut)]</a>
+                            </BOUCLE_mot_R9>
+                            </BOUCLE_gmotR9>
+                          </span>
+                        </div>
+                        <div class="listing-price">
+                            <span><?php echo number_format([(#SOUSTITRE|textebrut)]);?> RWF</span>
+                        </div>
+
+                        <div class="carbox-overlap-wrapper">
+                            <h2>Model [(#PS|textebrut)] </h2>
+                            <h4><?php echo number_format([(#SOUSTITRE|textebrut)]);?> RWF</h4>
+                            <div class="overlap-btns-area" style="float: right;">
+                                <div class="car-magnify-gallery">
+                                    <a href="[#URL_SITE_SPIP/IMG/(#LOGO_ARTICLE|fichier)]" class="overlap-btn">
+                                      <i class="fa fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- detail -->
+                    <div class="caption detail">
+                        <!-- Header -->
+                        <header class="clearfix">
+                            <h5 class="title">
+                                <a href="car-details.html">#TITRE</a>
+                            </h5>
+                            <ul class="custom-list">
+                                <li>
+                                  <BOUCLE_gmotR10(GROUPES_MOTS){id_groupe=5}>
+                                  <BOUCLE_mot_R10(MOTS){id_groupe}{id_article}>
+                                  <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                  </BOUCLE_mot_R10>
+                                </BOUCLE_gmotR10> /
+                                </li>
+                                <li>
+                                  <BOUCLE_gmotR11(GROUPES_MOTS){id_groupe=2}>
+                                  <BOUCLE_mot_R11(MOTS){id_groupe}{id_article}>
+                                  <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                  </BOUCLE_mot_R11>
+                                </BOUCLE_gmotR11> /
+                                </li>
+                                <li>
+                                  <BOUCLE_gmotR12(GROUPES_MOTS){id_groupe=3}>
+                                    <BOUCLE_mot_R12(MOTS){id_groupe}{id_article}>
+                                      <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                    </BOUCLE_mot_R12>
+                                  </BOUCLE_gmotR12>
+                                </li>
+                            </ul>
+                        </header>
+                        <!-- paragraph -->
+                        <!-- Facilities List -->
+                        <div class="facilities-area">
+                            <ul class="facilities-list clearfix">
+                                <li>
+                                    <i class="flaticon-gasoline-pump"></i>
+                                    <span>
+                                      <BOUCLE_gmotR13(GROUPES_MOTS){id_groupe=3}>
+                                        <BOUCLE_mot_R13(MOTS){id_groupe}{id_article}>
+                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                        </BOUCLE_mot_R13>
+                                      </BOUCLE_gmotR13>
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="flaticon-automatic-flash-symbol"></i>
+                                    <span>
+                                      <BOUCLE_gmotR14(GROUPES_MOTS){id_groupe=2}>
+                                        <BOUCLE_mot_R14(MOTS){id_groupe}{id_article}>
+                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                        </BOUCLE_mot_R14>
+                                      </BOUCLE_gmotR14>
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="flaticon-road-with-broken-line"></i>
+                                    <span>
+                                      <BOUCLE_gmotR15(GROUPES_MOTS){id_groupe=1}>
+                                        <BOUCLE_mot_R15(MOTS){id_groupe}{id_article}>
+                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                        </BOUCLE_mot_R15>
+                                      </BOUCLE_gmotR15>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                      <BOUCLE_gmotR16(GROUPES_MOTS){id_groupe=8}>
+                                        <BOUCLE_mot_R16(MOTS){id_groupe}{id_article}>
+                                          <i class="flaticon-racing-flag"></i>
+                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                        </BOUCLE_mot_R16>
+                                      </BOUCLE_gmotR16>
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="flaticon-time"></i>
+                                    <span>
+                                      <a href="[(#URL_SITE_SPIP)]?page=fabrication&ps=[(#PS|textebrut)]">[(#PS|textebrut)]</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Car box end-->
+            </div>
+          </BOUCLE_for_sale>
+        </div>
+    </div>
+</div>
+<!-- Featured car end-->
+
+<!-- Featured car start-->
+<div class="featured-car content-area clearfix">
+    <div class="container">
+        <div class="main-title">
+            <h1>FOR RENT</h1>
+        </div>
+        <div class="row">
+          <BOUCLE_for_rent(ARTICLES){id_mot=16}{!par date}{0,6}>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 wow fadeInUp delay-03s">
+                <!-- Car box start-->
+                <div class="thumbnail car-box clearfix">
+                    <div class="car-box-thumbnail">
+                        <img src="[#URL_SITE_SPIP/IMG/(#LOGO_ARTICLE|fichier)]" alt="car-1">
+                        <div class="is-featured">
+                          <span class="for">
+                            <BOUCLE_gmotR17(GROUPES_MOTS){id_groupe=7}>
+                            <BOUCLE_mot_R17(MOTS){id_groupe}{id_article}>
+                            <a href="#URL_MOT" style="color: #fff;">FOR [(#TITRE|textebrut)]</a>
+                            </BOUCLE_mot_R17>
+                            </BOUCLE_gmotR17>
+                          </span>
+                        </div>
+                        <div class="listing-price">
+                            <span><?php echo number_format([(#SOUSTITRE|textebrut)]);?> RWF</span>
+                        </div>
+
+                        <div class="carbox-overlap-wrapper">
+                            <h2>Model [(#PS|textebrut)] </h2>
+                            <h4><?php echo number_format([(#SOUSTITRE|textebrut)]);?> RWF</h4>
+                            <div class="overlap-btns-area" style="float: right;">
+                                <div class="car-magnify-gallery">
+                                    <a href="[#URL_SITE_SPIP/IMG/(#LOGO_ARTICLE|fichier)]" class="overlap-btn">
+                                      <i class="fa fa-expand"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- detail -->
+                    <div class="caption detail">
+                        <!-- Header -->
+                        <header class="clearfix">
+                            <h5 class="title">
+                                <a href="car-details.html">#TITRE</a>
+                            </h5>
+                            <ul class="custom-list">
+                                <li>
+                                  <BOUCLE_gmotR18(GROUPES_MOTS){id_groupe=5}>
+                                  <BOUCLE_mot_R18(MOTS){id_groupe}{id_article}>
+                                  <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                  </BOUCLE_mot_R18>
+                                </BOUCLE_gmotR18> /
+                                </li>
+                                <li>
+                                  <BOUCLE_gmotR19(GROUPES_MOTS){id_groupe=2}>
+                                  <BOUCLE_mot_R19(MOTS){id_groupe}{id_article}>
+                                  <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                  </BOUCLE_mot_R19>
+                                </BOUCLE_gmotR19> /
+                                </li>
+                                <li>
+                                  <BOUCLE_gmotR20(GROUPES_MOTS){id_groupe=3}>
+                                    <BOUCLE_mot_R21(MOTS){id_groupe}{id_article}>
+                                      <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                    </BOUCLE_mot_R21>
+                                  </BOUCLE_gmotR20>
+                                </li>
+                            </ul>
+                        </header>
+                        <!-- paragraph -->
+                        <!-- Facilities List -->
+                        <div class="facilities-area">
+                            <ul class="facilities-list clearfix">
+                                <li>
+                                    <i class="flaticon-gasoline-pump"></i>
+                                    <span>
+                                      <BOUCLE_gmotR22(GROUPES_MOTS){id_groupe=3}>
+                                        <BOUCLE_mot_R22(MOTS){id_groupe}{id_article}>
+                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                        </BOUCLE_mot_R22>
+                                      </BOUCLE_gmotR22>
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="flaticon-automatic-flash-symbol"></i>
+                                    <span>
+                                      <BOUCLE_gmotR23(GROUPES_MOTS){id_groupe=2}>
+                                        <BOUCLE_mot_R23(MOTS){id_groupe}{id_article}>
+                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                        </BOUCLE_mot_R23>
+                                      </BOUCLE_gmotR23>
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="flaticon-road-with-broken-line"></i>
+                                    <span>
+                                      <BOUCLE_gmotR24(GROUPES_MOTS){id_groupe=1}>
+                                        <BOUCLE_mot_R24(MOTS){id_groupe}{id_article}>
+                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                        </BOUCLE_mot_R24>
+                                      </BOUCLE_gmotR24>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                      <BOUCLE_gmotR25(GROUPES_MOTS){id_groupe=8}>
+                                        <BOUCLE_mot_R25(MOTS){id_groupe}{id_article}>
+                                          <i class="flaticon-racing-flag"></i>
+                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                        </BOUCLE_mot_R25>
+                                      </BOUCLE_gmotR25>
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="flaticon-time"></i>
+                                    <span>
+                                      <a href="[(#URL_SITE_SPIP)]?page=fabrication&ps=[(#PS|textebrut)]">[(#PS|textebrut)]</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Car box end-->
+            </div>
+          </BOUCLE_for_rent>
+        </div>
+    </div>
+</div>
+<!-- Featured car end-->
+
+<!-- Partners block start -->
+<!-- <div class="partners-block">
+    <div class="container">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="carousel our-partners slide" id="ourPartners">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <a href="#">
+                                    <img src="img/brand/brand-1.png" alt="brand-1">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <a href="#">
+                                    <img src="img/brand/brand-2.png" alt="brand-2">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <a href="#">
+                                    <img src="img/brand/brand-3.png" alt="brand-3">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <a href="#">
+                                    <img src="img/brand/brand-4.png" alt="brand-4">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="col-xs-12 col-sm-6 col-md-3">
+                                <a href="#">
+                                    <img src="img/brand/brand-5.png" alt="brand-5">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#ourPartners" data-slide="prev"><i class="fa fa-chevron-left icon-prev"></i></a>
+                    <a class="right carousel-control" href="#ourPartners" data-slide="next"><i class="fa fa-chevron-right icon-next"></i></a>
+                </div>
+            </div>
+        </div>
+     </div>
+</div> -->
+<!-- Partners block end -->
+
+<INCLURE(footer)>

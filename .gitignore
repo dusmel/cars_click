@@ -1,0 +1,12 @@
+tmp/cache/*
+tmp/cache/*/*
+tmp/*
+config/*
+tmp/job_queue_next.txt
+tmp/meta_cache.php
+config/connect.php
+local/cache-css/*
+local/cache-js/*
+local/cache-vignettes/*
+tmp/log/spip.log
+

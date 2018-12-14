@@ -1,0 +1,80 @@
+.car-box img{
+  height: 202px;
+}
+
+
+.banner {
+  background-color: #fff;
+}
+
+
+/* ------------------------------- search ----------------------------------------------- */
+.search{
+  padding: 3rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+ .banner .col-sm-9, .banner .col-sm-3{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.banner .col-sm-3{
+  height: 520px;
+  border: 1px solid #014a7f;
+}
+
+.banner .col-sm-3 h4{
+  text-align: center;
+  font-weight: 600;
+  font-size: 23px;
+  color: #014a7f;
+}
+
+.wide{
+  margin-bottom: 1.5rem;
+}
+
+.search a{
+  background: #014a7f;
+  border: 1px solid #0a304c;
+  color: #fff;
+  display: flow-root;
+  text-align: center;
+  font-weight: 600;
+  padding: 4px 0px;
+  font-size: large;
+  margin-top: 2rem;
+}
+
+.search a:hover{
+  background: #0a304c;
+  color: #fff;
+}
+
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(10, 10, 10, 0.5);
+  width: 100%;
+  height: 100%;
+}
+
+.banner-caption{
+  position: absolute;
+  left: 9rem;
+  bottom: 8rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 3px 8px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.menu-space{
+  margin-left: 12rem !important;
+}
+@media only screen and (max-width: 600px) {
+  .nav{
+    margin-left: 2px !important;
+  }
+}
