@@ -1,10 +1,10 @@
 
 #page_scroller {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .navbar-search-input::-webkit-input-placeholder {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .btn-view:hover {
@@ -12,81 +12,82 @@
 }
 
 .brand-box-2 h5 a{
-    color: #ffb400;
+    color: #00497f;
 }
 
 .view-all ul li a:hover{
-    background: #ffb400;
+    background: #00497f;
 }
 
 .agent-box .detail .contact p i{
-    color: #ffb400;
+    color: #00497f;
 }
 
 .navbar-search-input:-moz-placeholder {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .navbar-search-input::-moz-placeholder {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .navbar-search-input:-ms-input-placeholder {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .navbar-search-open .navbar-search-icon {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .navbar-search-open .navbar-search-submit {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .dropdown-menu>li>a:hover {
-    color: #ffb400;
-    border-left: solid 5px #ffb400;
+    color: #00497f;
+    border-left: solid 5px #00497f;
     background: #ffffff ;
 }
 
 /** MAIN HEADER AREA START **/
 .main-header .navbar-default .nav > li > a:hover {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .top-header .sign-in:hover{
-    color: #ffb400;
+    color: #00497f;
 }
 
 .agent-box .detail h3{
-    color: #ffb400;
+    color: #00497f;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
 .navbar-default .navbar-nav > .active > a:hover {
-    color: #ffb400 !important;
+    color: #00497f !important;
     background: transparent;
+    border-bottom: 5px solid #00497f;
 }
 
 .btn-view {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .car-box .detail header h5 a {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .car-box .detail header .price {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .car-box .detail .facilities-list li i {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .btn-details {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .btn-details:hover {
@@ -98,12 +99,12 @@
 }
 
 .is-featured {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .overlap-btn {
-    background: #ffb400;
-    border: solid 2px #ffb400;
+    background: #00497f;
+    border: solid 2px #00497f;
 }
 
 .overlap-btn:hover {
@@ -113,171 +114,171 @@
 
 
 .modal-title {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .sub-footer form .button-small {
-    border: solid 1px #ffb400 !important;
-    background: #ffb400 !important;
+    border: solid 1px #00497f !important;
+    background: #00497f !important;
 }
 
 .breadcrumb-area .btn-default:hover {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .block-heading h4 {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .block-heading .heading-icon{
-    background: #ffb400;
+    background: #00497f;
 }
 
 .change-view-btn {
-    color: #ffb400;
-    border: solid 1px #ffb400;
+    color: #00497f;
+    border: solid 1px #00497f;
 }
 
 .change-view-btn:hover {
-    border: solid 1px #ffb400;
-    background: #ffb400;
+    border: solid 1px #00497f;
+    background: #00497f;
 }
 
 .active-view-btn {
-    background: #ffb400;
-    border: solid 1px #ffb400;
+    background: #00497f;
+    border: solid 1px #00497f;
 }
 
 .active-view-btn:hover {
-    border: solid 1px #ffb400;
-    color: #ffb400;
+    border: solid 1px #00497f;
+    color: #00497f;
 }
 
 .car-list-box .detail header h3 a {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .car-list-box .detail header .price {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .car-list-box .detail .facilities-list li i {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .pagination > li > a {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .pagination > li > a:hover {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .pagination > .active > a {
-    background: #ffb400;
-    border-color: #ffb400;
+    background: #00497f;
+    border-color: #00497f;
 }
 
 .pagination > .active > a:hover {
-    background: #ffb400;
-    border-color: #ffb400;
+    background: #00497f;
+    border-color: #00497f;
 }
 
 .helping-Center ul li i {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .slider.slider-horizontal .slider-selection {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .slider.slider-horizontal .slider-handle {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .bootstrap-select .dropdown-menu li a {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .checkbox-theme input[type="checkbox"]:checked + label::before {
-    background-color: #ffb400;
-    border-color: #ffb400;
+    background-color: #00497f;
+    border-color: #00497f;
 }
 
 .amenities-box ul li i {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .blog-box .btn {
-    border: solid 1px #ffb400;
-    color: #ffb400;
+    border: solid 1px #00497f;
+    color: #00497f;
 }
 
 .blog-box .btn:hover {
-    border: solid 1px #ffb400;
+    border: solid 1px #00497f;
     color: #fff;
-    background: #ffb400;
+    background: #00497f;
 }
 
 .book-btn {
-    background: #ffb400;
-    border: 1px solid #ffb400;
+    background: #00497f;
+    border: 1px solid #00497f;
 }
 
 .features-opions ul li i {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .twitter-feed a {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .about-item .text h2:after {
-    background-color: #ffb400;
+    background-color: #00497f;
 }
 
 .we-best .content i {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .we-best .content h4 {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .team-box .detail h3 a:hover{
-    color: #ffb400;
+    color: #00497f;
 }
 
 .blog-box .detail .header a {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .blog-banner .home:hover {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .categorie ul li a:hover{
-    color: #ffb400;
+    color: #00497f;
 }
 
 blockquote {
-    border-left: 4px solid #ffb400;
+    border-left: 4px solid #00497f;
 }
 
 .comments-thread .title {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .btn-submit {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .breadcrumb-area ul li a:hover{
-    color: #ffb400;
+    color: #00497f;
 }
 
 .btn-submit:hover{
@@ -285,11 +286,11 @@ blockquote {
 }
 
 .comment .comment-body .date i{
-    color: #ffb400;
+    color: #00497f;
 }
 
 .comment .comment-meta-reply a{
-    background: #ffb400;
+    background: #00497f;
 }
 
 .faq-body .panel-body-2 span a{
@@ -297,40 +298,40 @@ blockquote {
 }
 
 .form-content-box .footer span a {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .error404-content h2 {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .featured-car-slider .details h4 a {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .featured-car-slider .details .price {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .btn-div a span {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .features-item .detail h4:after {
-    background-color: #ffb400;
+    background-color: #00497f;
 }
 
 .features-item .detail h4 a:hover {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .panel-box .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .banner .btn-default {
-    border: solid 2px #ffb400;
-    color: #ffb400;
+    border: solid 2px #00497f;
+    color: #00497f;
 }
 
 .banner .btn-default:hover{
@@ -339,32 +340,32 @@ blockquote {
 }
 
 .tags-box a:hover {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .nav>li>a:hover{
-    background: #ffb400;
+    background: #00497f;
 }
 
 .opening-hours h3:after {
-    background-color: #ffb400;
+    background-color: #00497f;
 }
 
 .about-text ul li i {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .our-serivce-2 .media .media-left i {
-    background: #ffb400;
+    background: #00497f;
 }
 
 .panel-title i {
-    color: #ffb400;
+    color: #00497f;
 }
 
 .pricing-2 .btn-outline{
-    border: solid 1px #ffb400;
-    color: #ffb400;
+    border: solid 1px #00497f;
+    color: #00497f;
 }
 
 .pricing-2 .btn-outline:hover{
@@ -374,7 +375,7 @@ blockquote {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #ffb400;
+    background-color: #00497f;
 }
 
 @media (max-width: 768px) {
@@ -382,25 +383,25 @@ blockquote {
     .navbar-default .navbar-nav > .active > a:focus,
     .navbar-default .navbar-nav > .active > a:hover {
         color: #fff !important;
-        background: #ffb400
+        background: #00497f
     }
 
     .main-header .navbar-default .nav > li > a:hover {
-        background: #ffb400;
+        background: #00497f;
         color: #fff;
     }
 
     .dropdown-menu>li>a:hover {
         color: #fff !important;
-        border-left: solid 5px #ffb400;
-        background: #ffb400 !important;
+        border-left: solid 5px #00497f;
+        background: #00497f !important;
     }
 }
 
 
 .button-theme {
-    background: #ffb400;
-    border: 2px solid #ffb400;
+    background: #00497f;
+    border: 2px solid #00497f;
 }
 
 .button-theme:hover {
@@ -409,8 +410,8 @@ blockquote {
 }
 
 .out-line-btn {
-    border: solid 2px #ffb400;
-    color: #ffb400;
+    border: solid 2px #00497f;
+    color: #00497f;
 }
 
 .out-line-btn:hover {
@@ -420,8 +421,8 @@ blockquote {
 }
 
 .btn-outline {
-    border: solid 1px #ffb400;
-    color: #ffb400;
+    border: solid 1px #00497f;
+    color: #00497f;
 }
 
 .btn-outline:hover {
@@ -431,8 +432,8 @@ blockquote {
 }
 
 .border-button-theme {
-    border: 2px solid #ffb400;
-    color: #ffb400;
+    border: 2px solid #00497f;
+    color: #00497f;
 }
 
 .border-button-theme:hover {
