@@ -8,7 +8,7 @@
           <div id="immersive_slider">
             <BOUCLE_home_slider_top1(ARTICLES){id_mot=22}{!par date}{0,3}>
               <div class="slide" data-blurred="[(#LOGO_ARTICLE|extraire_attribut{src})]">
-                <div class="overlay">
+                <div class="banner-overlay">
                   <div class="banner-caption">
                     <h2>#TITRE</h2>
                     <span>
@@ -59,6 +59,21 @@
 </div>
 <!-- Banner end -->
 
+<!-- verify if message was sent -->
+<?php if(isset($_POST['sent'])){ ?>
+    <div class="alert alert-success alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" >&times;</button>
+      Your message was sent successfully
+    </div>
+  <?php } ?>
+  <?php if(isset($_POST['no-sent'])){ ?>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" >&times;</button>
+      <strong>Oh snap!! There was a problem sending your message</strong>
+    </div>
+  <?php } ?>
+  <!-- end verification -->
+
 <!-- Featured car start-->
 <div class="featured-car content-area clearfix">
     <div class="container">
@@ -76,7 +91,7 @@
                           <span class="for">
                             <BOUCLE_gmotR1(GROUPES_MOTS){id_groupe=7}>
                             <BOUCLE_mot_R1(MOTS){id_groupe}{id_article}>
-                            <a href="#URL_MOT" style="color: #fff;">FOR [(#TITRE|textebrut)]</a>
+                            <a href="?page=listing&id=#ID_MOT" style="color: #fff;">FOR [(#TITRE|textebrut)]</a>
                             </BOUCLE_mot_R1>
                             </BOUCLE_gmotR1>
                           </span>
@@ -103,25 +118,25 @@
                         <!-- Header -->
                         <header class="clearfix">
                             <h5 class="title">
-                                <a href="car-details.html">#TITRE</a>
+                                <a href="#URL_ARTICLE">#TITRE</a>
                             </h5>
                             <ul class="custom-list">
                                 <li>
                                   <BOUCLE_mot_R2(MOTS){id_groupe=5}{id_article}>
-                                    <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                    <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                   </BOUCLE_mot_R2> /
                                 </li>
                                 <li>
                                   <BOUCLE_gmotR3(GROUPES_MOTS){id_groupe=2}>
                                   <BOUCLE_mot_R3(MOTS){id_groupe}{id_article}>
-                                  <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                  <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                   </BOUCLE_mot_R3>
                                 </BOUCLE_gmotR3> /
                                 </li>
                                 <li>
                                   <BOUCLE_gmotR4(GROUPES_MOTS){id_groupe=3}>
                                     <BOUCLE_mot_R4(MOTS){id_groupe}{id_article}>
-                                      <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                      <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                     </BOUCLE_mot_R4>
                                   </BOUCLE_gmotR4>
                                 </li>
@@ -136,7 +151,7 @@
                                     <span>
                                       <BOUCLE_gmotR5(GROUPES_MOTS){id_groupe=3}>
                                         <BOUCLE_mot_R5(MOTS){id_groupe}{id_article}>
-                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                          <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                         </BOUCLE_mot_R5>
                                       </BOUCLE_gmotR5>
                                     </span>
@@ -146,7 +161,7 @@
                                     <span>
                                       <BOUCLE_gmotR6(GROUPES_MOTS){id_groupe=2}>
                                         <BOUCLE_mot_R6(MOTS){id_groupe}{id_article}>
-                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                          <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                         </BOUCLE_mot_R6>
                                       </BOUCLE_gmotR6>
                                     </span>
@@ -156,7 +171,7 @@
                                     <span>
                                       <BOUCLE_gmotR7(GROUPES_MOTS){id_groupe=1}>
                                         <BOUCLE_mot_R7(MOTS){id_groupe}{id_article}>
-                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                          <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                         </BOUCLE_mot_R7>
                                       </BOUCLE_gmotR7>
                                     </span>
@@ -166,7 +181,7 @@
                                       <BOUCLE_gmotR8(GROUPES_MOTS){id_groupe=8}>
                                         <BOUCLE_mot_R8(MOTS){id_groupe}{id_article}>
                                           <i class="flaticon-racing-flag"></i>
-                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                          <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                         </BOUCLE_mot_R8>
                                       </BOUCLE_gmotR8>
                                     </span>
@@ -174,7 +189,7 @@
                                 <li>
                                     <i class="flaticon-time"></i>
                                     <span>
-                                      <a href="[(#URL_SITE_SPIP)]?page=fabrication&ps=[(#PS|textebrut)]">[(#PS|textebrut)]</a>
+                                      <a href="#">[(#PS|textebrut)]</a>
                                     </span>
                                 </li>
                             </ul>
@@ -206,7 +221,7 @@
                           <span class="for">
                             <BOUCLE_gmotR9(GROUPES_MOTS){id_groupe=7}>
                             <BOUCLE_mot_R9(MOTS){id_groupe}{id_article}>
-                            <a href="#URL_MOT" style="color: #fff;">FOR [(#TITRE|textebrut)]</a>
+                            <a href="?page=listing&id=#ID_MOT" style="color: #fff;">FOR [(#TITRE|textebrut)]</a>
                             </BOUCLE_mot_R9>
                             </BOUCLE_gmotR9>
                           </span>
@@ -233,27 +248,27 @@
                         <!-- Header -->
                         <header class="clearfix">
                             <h5 class="title">
-                                <a href="car-details.html">#TITRE</a>
+                                <a href="#URL_ARTICLE">#TITRE</a>
                             </h5>
                             <ul class="custom-list">
                                 <li>
                                   <BOUCLE_gmotR10(GROUPES_MOTS){id_groupe=5}>
                                   <BOUCLE_mot_R10(MOTS){id_groupe}{id_article}>
-                                  <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                  <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                   </BOUCLE_mot_R10>
                                 </BOUCLE_gmotR10> /
                                 </li>
                                 <li>
                                   <BOUCLE_gmotR11(GROUPES_MOTS){id_groupe=2}>
                                   <BOUCLE_mot_R11(MOTS){id_groupe}{id_article}>
-                                  <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                  <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                   </BOUCLE_mot_R11>
                                 </BOUCLE_gmotR11> /
                                 </li>
                                 <li>
                                   <BOUCLE_gmotR12(GROUPES_MOTS){id_groupe=3}>
                                     <BOUCLE_mot_R12(MOTS){id_groupe}{id_article}>
-                                      <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                      <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                     </BOUCLE_mot_R12>
                                   </BOUCLE_gmotR12>
                                 </li>
@@ -268,7 +283,7 @@
                                     <span>
                                       <BOUCLE_gmotR13(GROUPES_MOTS){id_groupe=3}>
                                         <BOUCLE_mot_R13(MOTS){id_groupe}{id_article}>
-                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                          <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                         </BOUCLE_mot_R13>
                                       </BOUCLE_gmotR13>
                                     </span>
@@ -278,7 +293,7 @@
                                     <span>
                                       <BOUCLE_gmotR14(GROUPES_MOTS){id_groupe=2}>
                                         <BOUCLE_mot_R14(MOTS){id_groupe}{id_article}>
-                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                          <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                         </BOUCLE_mot_R14>
                                       </BOUCLE_gmotR14>
                                     </span>
@@ -288,7 +303,7 @@
                                     <span>
                                       <BOUCLE_gmotR15(GROUPES_MOTS){id_groupe=1}>
                                         <BOUCLE_mot_R15(MOTS){id_groupe}{id_article}>
-                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                          <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                         </BOUCLE_mot_R15>
                                       </BOUCLE_gmotR15>
                                     </span>
@@ -298,7 +313,7 @@
                                       <BOUCLE_gmotR16(GROUPES_MOTS){id_groupe=8}>
                                         <BOUCLE_mot_R16(MOTS){id_groupe}{id_article}>
                                           <i class="flaticon-racing-flag"></i>
-                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                          <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                         </BOUCLE_mot_R16>
                                       </BOUCLE_gmotR16>
                                     </span>
@@ -338,7 +353,7 @@
                           <span class="for">
                             <BOUCLE_gmotR17(GROUPES_MOTS){id_groupe=7}>
                             <BOUCLE_mot_R17(MOTS){id_groupe}{id_article}>
-                            <a href="#URL_MOT" style="color: #fff;">FOR [(#TITRE|textebrut)]</a>
+                            <a href="?page=listing&id=#ID_MOT" style="color: #fff;">FOR [(#TITRE|textebrut)]</a>
                             </BOUCLE_mot_R17>
                             </BOUCLE_gmotR17>
                           </span>
@@ -365,27 +380,27 @@
                         <!-- Header -->
                         <header class="clearfix">
                             <h5 class="title">
-                                <a href="car-details.html">#TITRE</a>
+                                <a href="#URL_ARTICLE">#TITRE</a>
                             </h5>
                             <ul class="custom-list">
                                 <li>
                                   <BOUCLE_gmotR18(GROUPES_MOTS){id_groupe=5}>
                                   <BOUCLE_mot_R18(MOTS){id_groupe}{id_article}>
-                                  <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                  <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                   </BOUCLE_mot_R18>
                                 </BOUCLE_gmotR18> /
                                 </li>
                                 <li>
                                   <BOUCLE_gmotR19(GROUPES_MOTS){id_groupe=2}>
                                   <BOUCLE_mot_R19(MOTS){id_groupe}{id_article}>
-                                  <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                  <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                   </BOUCLE_mot_R19>
                                 </BOUCLE_gmotR19> /
                                 </li>
                                 <li>
                                   <BOUCLE_gmotR20(GROUPES_MOTS){id_groupe=3}>
                                     <BOUCLE_mot_R21(MOTS){id_groupe}{id_article}>
-                                      <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                      <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                     </BOUCLE_mot_R21>
                                   </BOUCLE_gmotR20>
                                 </li>
@@ -400,7 +415,7 @@
                                     <span>
                                       <BOUCLE_gmotR22(GROUPES_MOTS){id_groupe=3}>
                                         <BOUCLE_mot_R22(MOTS){id_groupe}{id_article}>
-                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                          <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                         </BOUCLE_mot_R22>
                                       </BOUCLE_gmotR22>
                                     </span>
@@ -410,7 +425,7 @@
                                     <span>
                                       <BOUCLE_gmotR23(GROUPES_MOTS){id_groupe=2}>
                                         <BOUCLE_mot_R23(MOTS){id_groupe}{id_article}>
-                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                          <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                         </BOUCLE_mot_R23>
                                       </BOUCLE_gmotR23>
                                     </span>
@@ -420,7 +435,7 @@
                                     <span>
                                       <BOUCLE_gmotR24(GROUPES_MOTS){id_groupe=1}>
                                         <BOUCLE_mot_R24(MOTS){id_groupe}{id_article}>
-                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                          <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                         </BOUCLE_mot_R24>
                                       </BOUCLE_gmotR24>
                                     </span>
@@ -430,7 +445,7 @@
                                       <BOUCLE_gmotR25(GROUPES_MOTS){id_groupe=8}>
                                         <BOUCLE_mot_R25(MOTS){id_groupe}{id_article}>
                                           <i class="flaticon-racing-flag"></i>
-                                          <a href="#URL_MOT">[(#TITRE|textebrut)]</a>
+                                          <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
                                         </BOUCLE_mot_R25>
                                       </BOUCLE_gmotR25>
                                     </span>

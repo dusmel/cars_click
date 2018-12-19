@@ -1,0 +1,400 @@
+<INCLURE(header)>
+
+
+<!-- Sub banner start -->
+<div class="sub-banner">
+    <div class="overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb-area">
+                        <h2>
+                          <BOUCLE_selected_header(MOTS){id_mot=#ENV{id}}>
+                            #TITRE
+                          </BOUCLE_selected_header>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sub banner end -->
+
+<!-- Car list start-->
+<div class="car-list content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-xs-12">
+                <!-- Block heading Start-->
+                <div class="option-bar block-heading">
+                    <div class="row">
+                       <div class="col-lg-6 col-md-5 col-sm-5 col-xs-2">
+                           <h4>
+                                <span class="heading-icon">
+                                    <i class="fa fa-th-list"></i>
+                                </span>
+                                <span class="hidden-xs">
+                                  <BOUCLE_selected_titre(MOTS){id_mot=#ENV{id}}>
+                                    #TITRE
+                                  </BOUCLE_selected_titre>
+                                </span>
+                            </h4>
+                        </div>
+                   </div>
+               </div>
+               <!-- Block heading end -->
+               <div class="clearfix"></div>
+
+                <!-- Car list start -->
+              <BOUCLE_selected(ARTICLES){id_mot=#ENV{id}}{!par date}>
+                <div class="car-list-box clearfix wow fadeInUp delay-03s">
+                    <div class=" row-table row-flush">
+                        <div class="col-lg-4  col-md-5 col-sm-4 col-xs-12 car-pic">
+                            <div class="car-box-thumbnail">
+                                <img src="[#URL_SITE_SPIP/IMG/(#LOGO_ARTICLE|fichier)]" alt="car-1" class="img-responsive">
+                                <div class="listing-for">
+                                    <span class="for">
+                                      <BOUCLE_gmotR1(GROUPES_MOTS){id_groupe=7}>
+                                      <BOUCLE_mot_R1(MOTS){id_groupe}{id_article}>
+                                      <a href="?page=listing&id=#ID_MOT" style="color: #fff;">FOR [(#TITRE|textebrut)]</a>
+                                      </BOUCLE_mot_R1>
+                                      </BOUCLE_gmotR1>
+                                    </span>
+                                </div>
+                                <div class="listing-price">
+                                    <span><?php echo number_format([(#SOUSTITRE|textebrut)]);?> RWF</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Detail Body -->
+                        <div class="col-lg-8 col-md-7 col-sm-8 col-xs-12 detail">
+                            <!-- Header -->
+                            <header>
+                                <!-- Title -->
+                                <h3 class="title">
+                                    <a href="#URL_ARTICLE">#TITRE</a>
+                                </h3>
+                                <!-- Custom List -->
+                                <ul class="custom-list">
+                                    <li>
+                                      <BOUCLE_mot_R2(MOTS){id_groupe=5}{id_article}>
+                                        <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
+                                      </BOUCLE_mot_R2> /
+                                    </li>
+                                    <li>
+                                      <BOUCLE_gmotR3(GROUPES_MOTS){id_groupe=2}>
+                                      <BOUCLE_mot_R3(MOTS){id_groupe}{id_article}>
+                                      <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
+                                      </BOUCLE_mot_R3>
+                                    </BOUCLE_gmotR3> /
+                                    </li>
+                                    <li>
+                                      <BOUCLE_gmotR4(GROUPES_MOTS){id_groupe=3}>
+                                        <BOUCLE_mot_R4(MOTS){id_groupe}{id_article}>
+                                          <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
+                                        </BOUCLE_mot_R4>
+                                      </BOUCLE_gmotR4>
+                                    </li>
+                                </ul>
+                            </header>
+                            <div class="clearfix"></div>
+
+                            <!-- Facilities List -->
+                            <div class="facilities-area">
+                                <ul class="facilities-list clearfix">
+                                    <li>
+                                        <i class="flaticon-gasoline-pump"></i>
+                                        <span>
+                                          <BOUCLE_gmotR5(GROUPES_MOTS){id_groupe=3}>
+                                            <BOUCLE_mot_R5(MOTS){id_groupe}{id_article}>
+                                              <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
+                                            </BOUCLE_mot_R5>
+                                          </BOUCLE_gmotR5>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-automatic-flash-symbol"></i>
+                                        <span>
+                                          <BOUCLE_gmotR6(GROUPES_MOTS){id_groupe=2}>
+                                            <BOUCLE_mot_R6(MOTS){id_groupe}{id_article}>
+                                              <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
+                                            </BOUCLE_mot_R6>
+                                          </BOUCLE_gmotR6>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-road-with-broken-line"></i>
+                                        <span>
+                                          <BOUCLE_gmotR7(GROUPES_MOTS){id_groupe=1}>
+                                            <BOUCLE_mot_R7(MOTS){id_groupe}{id_article}>
+                                              <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
+                                            </BOUCLE_mot_R7>
+                                          </BOUCLE_gmotR7>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                          <BOUCLE_gmotR8(GROUPES_MOTS){id_groupe=8}>
+                                            <BOUCLE_mot_R8(MOTS){id_groupe}{id_article}>
+                                              <i class="flaticon-racing-flag"></i>
+                                              <a href="?page=listing&id=#ID_MOT">[(#TITRE|textebrut)]</a>
+                                            </BOUCLE_mot_R8>
+                                          </BOUCLE_gmotR8>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-time"></i>
+                                        <span>
+                                          <a href="#">[(#PS|textebrut)]</a>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </BOUCLE_selected>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <!-- Sidebar start-->
+                <div class="sidebar">
+                    <aside class="sidebar-widget">
+                        <!-- Criteria -->
+                        <div class="single-block criteria">
+                            <h2 class="title">Find your Car</h2>
+                            <form method="GET">
+                                <div class="form-group search-fields">
+                                    <label>Brand</label>
+                                    <select class="selectpicker" multiple name="any">
+                                        <option>Any</option>
+                                        <option>New</option>
+                                        <option>Semi-New</option>
+                                        <option>Damaged</option>
+                                        <option>Used</option>
+                                    </select>
+                                </div>
+                                <div class="form-group search-fields">
+                                    <label>Location</label>
+                                    <select class="selectpicker" multiple name="united-states">
+                                        <option>United States</option>
+                                        <option>United Kingdom</option>
+                                        <option>American Samoa</option>
+                                        <option>Belgium</option>
+                                        <option>Cameroon</option>
+                                        <option>Canada</option>
+                                    </select>
+                                </div>
+                                <div class="form-group search-fields">
+                                    <label>Year</label>
+                                    <select class="selectpicker" multiple name="2011">
+                                        <option>2011</option>
+                                        <option>2013</option>
+                                        <option>2014</option>
+                                        <option>2015</option>
+                                        <option>2016</option>
+                                        <option>2017</option>
+                                        <option>2018</option>
+                                    </select>
+                                </div>
+                                <div class="form-group search-fields">
+                                    <label>Category</label>
+                                    <select class="selectpicker" multiple name="automatic">
+                                        <option>Luxury Car</option>
+                                        <option>Pickup Truck</option>
+                                        <option>Minivan</option>
+                                        <option>Truck</option>
+                                        <option>Sports Car</option>
+                                        <option>Wagon</option>
+                                    </select>
+                                </div>
+                                <div class="form-group search-fields">
+                                    <label>Transmission</label>
+                                    <select class="selectpicker" multiple name="automatic">
+                                        <option>Automatic</option>
+                                        <option>Manual</option>
+                                        <option>Tiptronic</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Price -->
+                        <div class="single-block price">
+                            <h2 class="title">Price</h2>
+                            <div class="slider-price-amont">
+                                <span class="pull-left">$1000</span>
+                                <span class="pull-right">$100000</span>
+                            </div>
+                            <input type="text" class="price-slider" style="width:100%" data-slider-min="1000" data-slider-max="100000" data-slider-step="1000" data-slider-value="[10000,50000]" />
+                            <br/><br/>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group search-fields">
+                                        <label>Min price</label>
+                                        <input class="form-control" placeholder="Min price" id="minPrice" value="1000">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group search-fields">
+                                        <label>Max price</label>
+                                        <input class="form-control" placeholder="Min price" id="maxPrice" value="50000">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Brands -->
+                        <div class="single-block brands">
+                            <!-- title-->
+                            <h2 class="title">Brands</h2>
+                            <div class="checkbox checkbox-theme checkbox-circle">
+                                <input id="checkbox8" type="checkbox">
+                                <label for="checkbox8">
+                                    Audi
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-theme checkbox-circle">
+                                <input id="checkbox9" type="checkbox">
+                                <label for="checkbox9">
+                                    BMW
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-theme checkbox-circle">
+                                <input id="checkbox10" type="checkbox">
+                                <label for="checkbox10">
+                                    Mercedes benz
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-theme checkbox-circle">
+                                <input id="checkbox11" type="checkbox">
+                                <label for="checkbox11">
+                                    Lamborghini
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-theme checkbox-circle">
+                                <input id="checkbox12" type="checkbox">
+                                <label for="checkbox12">
+                                    Buick
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-theme checkbox-circle">
+                                <input id="checkbox13" type="checkbox">
+                                <label for="checkbox13">
+                                    Bugatti
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-theme checkbox-circle">
+                                <input id="checkbox14" type="checkbox">
+                                <label for="checkbox14">
+                                    Acura
+                                </label>
+                            </div>
+                            <div class="checkbox checkbox-theme checkbox-circle">
+                                <input id="checkbox15" type="checkbox">
+                                <label for="checkbox15">
+                                    Flat Screen TV
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Categorie -->
+                        <div class="single-block categorie">
+                            <h2 class="title">Categories</h2>
+                            <ul>
+                                <li><a href="#">Coupe</a></li>
+                                <li><a href="#">Luxury</a></li>
+                                <li><a href="#">Pickup Truck</a></li>
+                                <li><a href="#">Sports Car</a></li>
+                                <li><a href="#">Van</a></li>
+                                <li><a href="#">Wagon</a></li>
+                                <li><a href="#">First Drive</a></li>
+                                <li><a href="#">Automakers</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Recent cars start-->
+                        <div class="single-block recent-car recent-cars">
+                            <!-- Title-->
+                            <h2 class="title">Recent Car</h2>
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object" src="img/recent/recent-1.jpg" alt="recent-1">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h3>
+                                        <a href="car-details.html">Porsche Cayen Last</a>
+                                    </h3>
+                                    <span>October 18, 2017</span>
+                                    <p>$36.000</p>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object" src="img/recent/recent-2.jpg" alt="recent-2">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h3>
+                                        <a href="car-details.html">McLaren-650S</a>
+                                    </h3>
+                                    <span>november 13, 2017</span>
+                                    <p>$28.490</p>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object" src="img/recent/recent-3.jpg" alt="recent-3">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h3>
+                                        <a href="car-details.html">BMW e46 M3 Diski Serie</a>
+                                    </h3>
+                                    <span>december 21, 2017</span>
+                                    <p>$49.000</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Helping Start-->
+                        <div class="helping-Center">
+                            <h2 class="title">Helping Center</h2>
+                            <p>Vivamus eget nibh. Etiam cursus leo vel metus. Nulla facilisi. Aenean nec eros.</p>
+                            <ul class="contact-link">
+                                <li>
+                                    <i class="fa fa-map-marker"></i>
+                                    Aenean vulputate porttitor
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone"></i>
+                                    <a href="tel:+55-417-634-7071">
+                                        +55 417 634 7071
+                                    </a>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope-o"></i>
+                                    <a href="mailto:info@themevessel.com">
+                                        info@themevessel.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <!-- end-->
+                </div>
+                <!-- Sidebar end-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Car list end-->
+
+
+
+<INCLURE(footer)>

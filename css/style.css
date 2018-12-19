@@ -321,7 +321,7 @@ body {
 
 /** TOP HEADER AREA START **/
 .top-header {
-    background-color: #171C26;
+    background-color: #0a5083;
 }
 
 .top-header .list-inline {
@@ -330,7 +330,7 @@ body {
 
 .top-header .list-inline a {
     text-decoration: none;
-    color: #949494;
+    color: #fff;
     margin-right: 15px;
     font-size: 12px;
 }
@@ -904,7 +904,7 @@ a:focus {
 }
 
 .content-area {
-    padding: 100px 0 70px;
+    padding: 50px 0 30px;
 }
 
 .content-area-2 {
@@ -2316,7 +2316,7 @@ input[type=checkbox]:checked + label:before {
 }
 
 .about-item .text p {
-    line-height: 30px;
+    line-height: 20px;
     color: #5a5959;
     font-size: 14px;
     margin-bottom: 20px;

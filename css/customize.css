@@ -52,7 +52,7 @@
   color: #fff;
 }
 
-.overlay{
+.banner-overlay{
   position: absolute;
   left: 0;
   top: 0;
@@ -77,4 +77,12 @@
   .nav{
     margin-left: 2px !important;
   }
+}
+
+.service-center .about-text p{
+  font-size: 14.2px;
+}
+
+.car-details-body .carousel-inner .item img{
+  height: auto !important;
 }

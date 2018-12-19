@@ -1,0 +1,79 @@
+<INCLURE(header)>
+<!-- Sub banner start -->
+<div class="sub-banner">
+    <div class="overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb-area">
+                        <h2>About Us</h2>
+                        <ul class="breadcrumbs">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active">About Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sub banner end -->
+
+<!-- About item start-->
+<div class="about-item content-area-2">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <div class="text">
+                    <h2>About Us</h2>
+                    <BOUCLE_abt_us(ARTICLES){id_article = 42}>
+                      <p style="line-height: 1px;">#TEXTE</p>
+                    </BOUCLE_abt_us>
+                    <a href="contact.html" class="btn btn-submit">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About item end -->
+
+<!-- We best start-->
+<div class="we-best content-area-3">
+    <div class="container">
+        <div class="main-title">
+            <h1>Your Best move in transportation.</h1>
+        </div>
+        <div class="row mgn-btm">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="content">
+                    <i class="flaticon-security"></i>
+                    <h4>Highly  Secured</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="content">
+                    <i class="flaticon-handshake"></i>
+                    <h4>Trusted Agents</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="content">
+                    <i class="flaticon-dollar-sticker"></i>
+                    <h4>Get an Offer</h4>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                <div class="content">
+                    <i class="flaticon-call-center-agent"></i>
+                    <h4>24/7 CUSTOMER SUPPORT</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- We best end -->
+
+
+<!-- Footer -->
+<INCLURE(footer)>
